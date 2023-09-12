@@ -9,8 +9,7 @@
         getName?: () => string;
     }
 
-    // Suponiendo que tenga que declarar varios objetos iguales y para ahorrar código, puedo reemplazar
-    // todo esto por...
+    // Suponiendo que tenga que declarar varios objetos iguales y para ahorrar código, puedo reemplazar todo esto por...
     // let superheroes: { name: string, age?: number, powers: string[], getName?: () => string } = {
     //     name: 'Barry Allen',
     //     age: 24,
