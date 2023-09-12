@@ -11,4 +11,24 @@
     };
     superman;
 })();
+(() => {
+    const client = {
+        name: "Fernando",
+        age: 25,
+        address: {
+            id: 126,
+            zip: "DWE122",
+            city: "CABA",
+        },
+    };
+    const client2 = {
+        name: "Melisa",
+        age: 30,
+        address: {
+            city: "P.Ch",
+            id: 123,
+            zip: "JSJ33",
+        },
+    };
+})();
 //# sourceMappingURL=main.js.map
