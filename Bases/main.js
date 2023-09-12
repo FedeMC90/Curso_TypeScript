@@ -1,48 +1,51 @@
 "use strict";
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
+(() => {
+    class AvengerCorto {
+        static getAvgAge() {
+            return this.name;
         }
-    return t;
-};
-(() => {
-    const avengers = {
-        nick: 'Samuel L. Jackson',
-        ironman: 'Robert Downey Jr.',
-        vision: 'Paul Bettany',
-        activo: true,
-        poder: 1500.1234
-    };
-    const printAvengers = (_a) => {
-        var { ironman } = _a, resto = __rest(_a, ["ironman"]);
-        console.log(ironman, resto.vision);
-    };
-    const avengersArr = ['Cap. América', true, 150.15];
-    const [capi, seriaBoolean, unNumero] = avengersArr;
-})();
-(() => {
-    const ironman = {
-        name: "Ironman",
-        weapon: "Armorsuit"
-    };
-    const captainAmerica = {
-        name: "Capitán América",
-        weapon: "Escudo"
-    };
-    const thor = {
-        name: "Thor",
-        weapon: "Mjolnir"
-    };
-    const avengers = [ironman, thor, captainAmerica];
-    for (const avenger of avengers) {
+        ;
+        constructor(name, team, realName) {
+            this.name = name;
+            this.team = team;
+            this.realName = realName;
+        }
+        bio() {
+            return `${this.name} (${this.team})`;
+        }
     }
+    AvengerCorto.avgAge = 35;
+    const antman = new AvengerCorto('Antman', 'Capitan', 'Scott Lang');
 })();
 (() => {
-    const a = 'Federico';
+    class Avenger {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+        getFullName() {
+            return `${this.name} ${this.realName}`;
+        }
+    }
+    class Xmen extends Avenger {
+        constructor(name, realName, isMutant) {
+            super(name, realName);
+            this.isMutant = isMutant;
+        }
+        getFullNameDesdeXmen() {
+            console.log(super.getFullName());
+        }
+        get fullName() {
+            return `${this.name} - ${this.realName}`;
+        }
+        set fullName(name) {
+            if (name.length < 3) {
+                throw new Error('El nombre debe ser mayor de 3 letras.');
+            }
+            this.name = name;
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan', true);
+    wolverine.fullName = 'Federico';
 })();
 //# sourceMappingURL=main.js.map
