@@ -20,6 +20,9 @@
             zip: "DWE122",
             city: "CABA",
         },
+        getFullAddress(id) {
+            return this.address.city;
+        },
     };
     const client2 = {
         name: "Melisa",
@@ -28,6 +31,9 @@
             city: "P.Ch",
             id: 123,
             zip: "JSJ33",
+        },
+        getFullAddress(id) {
+            return this.address.city;
         },
     };
 })();
