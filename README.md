@@ -1,7 +1,7 @@
 
-# TypeScript course
+# Curso TypeScript
 
-#### This are my notes of the TypeScript course that I made
+#### Éstas son mis notas sobre TS
 
 JS originalmente es un lenguaje muy abierto, flexible y dinámico. Esto, a pesar de tener muchas ventajas también causa algunos problemas, como por ejemplo: 
 Hace muy difícil que pueda entenderse el código entre distintos programadores que trabajan en un mismo proyecto
