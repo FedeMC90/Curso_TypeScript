@@ -11,4 +11,6 @@ const charmander = new Pokemon('Charmander');
 
 // (Pokemon.prototype as any).customName = 'Pikachu';
 
-console.log('charmander: ', charmander);
+// charmander.savePokemonToDB(200);
+charmander.publicApi = 'https://fernando-herrera.com';
+console.log(charmander)
