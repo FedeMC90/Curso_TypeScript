@@ -96,6 +96,7 @@ Son funciones que me permiten agregar comportamientos o validaciones a clases, p
         // ...
       }
     }
+
 ## TS CONFIG
 
 - **sourceMap**: crea un archivo .js.map para poder ver en la consola del browser el nombre del archivo y la línea donde está el mensaje o error. Sirve para debugear.
@@ -103,3 +104,8 @@ Son funciones que me permiten agregar comportamientos o validaciones a clases, p
 - **removeComments**: los comentarios hechos en los archivos .ts no cumplen ninguna función en los archivos .js. Con esta función habilitada no transpila los comentarios.
 - **strict**: hace que TS sea más estricto. Recomendable que esté siempre habilitada.
 - **noImplicitAny**: toma el tipo de dato any como erróneo.
+
+## IMPLEMENTAR TS SOBRE UNA NUEVA LIBRERÍA
+
+Hay librerías que por defecto, si intentamos usar TS hay muchas palabras que éste no tiene configurado, por lo que se hace muy difícil de usar y tira errores. Para solucionar este problema hay que instalar un paquete de TS con las nomenclaturas propias de esa librería.
+Por ejemplo, si quiero usar Express, lo importo y me va a tirar error. Al hacer Ctrl + . sobre "express" me va a dar la opción de instalar el paquete @types/express en el package.json lo cual va eliminar todos los errores y permitirme usar TS con Express.
