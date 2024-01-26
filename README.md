@@ -68,12 +68,12 @@ Son funciones que me permiten agregar comportamientos o validaciones a clases, p
     }
     ```
 - **Propiedades:** los decoradores aplicados a propiedades pueden ser usados como validadores. En este caso, el decorador estaría validando que la propiedad *email* sea una dirección válida.
-
+```
     class User {
       @IsEmail()
       email: string;
     }
-
+```
 - **Métodos:** los decoradores aplicados a métodos pueden agregar funcionalidad a los mismos. En este caso por ejemplo, el decorador podría tomar el tiempo de ejecución del método.
 ```
     class MyService {
