@@ -43,7 +43,7 @@ Se pone "T" meramente por convención pero puede ir cualquier letra o cualquier 
         return argument;
     }
 
-También puedo hacer que la función genérica obligue a TS a usar un cierto tipo de dato. En este caso el argumento que envío y el que va a devolver van a tener que ser de tipo <Hero>
+También puedo hacer que la función genérica obligue a TS a usar un cierto tipo de dato. En este caso el argumento que envío y el que va a devolver van a tener que ser de tipo < Hero >
 
     export const genericFunctionArrow = <T>(argument: T) => argument;
 
@@ -58,7 +58,7 @@ Al recibir una data desde, por ejemplo un axios.get (respuesta HTTP) puedo darle
 Son funciones que me permiten agregar comportamientos o validaciones a clases, propiedades, métodos o parámetros de funciones. Se usan mucho en Angular. 
 
 - **Clases:** los decoradores aplicados a las clases pueden aportar información sobre cómo se deben comportar. En este caso, este decorador está configurando un componente.
-    
+    ```
     @Component({
         selector: 'app-root',
         templateUrl: 'app.component.html'
@@ -66,7 +66,7 @@ Son funciones que me permiten agregar comportamientos o validaciones a clases, p
     export class AppComponent {
         // ...
     }
- 
+    ```
 - **Propiedades:** los decoradores aplicados a propiedades pueden ser usados como validadores. En este caso, el decorador estaría validando que la propiedad *email* sea una dirección válida.
 
     class User {
@@ -75,16 +75,16 @@ Son funciones que me permiten agregar comportamientos o validaciones a clases, p
     }
 
 - **Métodos:** los decoradores aplicados a métodos pueden agregar funcionalidad a los mismos. En este caso por ejemplo, el decorador podría tomar el tiempo de ejecución del método.
-
+```
     class MyService {
       @logExecutionTime()
       fetchData() {
         // Realiza operaciones de búsqueda de datos
       }
     }
-
+```
 - **Parámetros de funciones:** los decoradores aplicados a los parámetros de las funciones pueden usarse por ejemplo para la inyección de dependencias. En este caso el decorador se utiliza para inyectar dependencias del servicio en el constructor.
-
+```
     function InjectService(service: Service) {
       return function (target: any, key: string, index: number) {
         // Inyecta el servicio en el parámetro en la posición 'index'
@@ -96,7 +96,7 @@ Son funciones que me permiten agregar comportamientos o validaciones a clases, p
         // ...
       }
     }
-
+```
 ## TS CONFIG
 
 - **sourceMap**: crea un archivo .js.map para poder ver en la consola del browser el nombre del archivo y la línea donde está el mensaje o error. Sirve para debugear.
